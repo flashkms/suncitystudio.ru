@@ -9,6 +9,8 @@
   <link rel="canonical" href="https://suncitystudio.ru/" />
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23f97316'/%3E%3C/svg%3E" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -55,12 +57,17 @@
   </header>
 
   <!-- Hero -->
-  <section id="hero" class="pt-24 pb-20 text-center max-w-screen-md mx-auto px-4">
-    <h1 class="text-3xl md:text-4xl font-bold mb-4">SUNCITY — аренда зала в Иркутске</h1>
-    <p class="mb-6">Почасовая аренда для фотосъёмки, йоги, танцев и мероприятий.</p>
-    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="#contact" class="bg-orange-500 text-white px-6 py-3 rounded-full text-lg shadow transition">Забронировать</a>
-      <a href="#gallery" class="bg-gray-100 text-gray-700 px-6 py-3 rounded-full text-lg shadow transition">Смотреть зал</a>
+  <section id="hero" class="relative pt-24 pb-20 text-center max-w-screen-md mx-auto px-4 overflow-hidden bg-center bg-cover" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80');">
+    <div class="absolute inset-0 bg-white/70"></div>
+    <div class="relative">
+      <h1 class="text-3xl md:text-4xl font-bold mb-4">SUNCITY — аренда зала в Иркутске</h1>
+      <p class="mb-2 text-lg">Светлая студия с зеркалами, видом на закат и атмосферой, в которую возвращаются снова.</p>
+      <p class="mb-4">Почасовая аренда для фотосъёмки, йоги, танцев и мероприятий.</p>
+      <p class="mb-6 text-sm text-gray-500">Работаем с 2018 года — нас выбрали более 1500 клиентов.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#contact" class="bg-orange-500 text-white px-6 py-3 rounded-full text-lg shadow transition">Забронировать</a>
+        <a href="#gallery" class="bg-gray-100 text-gray-700 px-6 py-3 rounded-full text-lg shadow transition">Смотреть зал</a>
+      </div>
     </div>
   </section>
 
@@ -68,19 +75,31 @@
   <section id="advantages" class="max-w-screen-md mx-auto px-4 py-12 space-y-8">
     <h2 class="text-2xl font-semibold text-center mb-4">Почему выбирают нас</h2>
     <ul class="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
-      <li>
+      <li class="group p-4 rounded-xl hover:bg-orange-50 transition">
+        <div class="w-16 h-16 mx-auto mb-2 flex items-center justify-center rounded-full bg-orange-100 group-hover:bg-orange-200 transition">
+          <i data-lucide="sun" class="w-8 h-8 text-orange-500"></i>
+        </div>
         <h3 class="font-medium">Панорамные окна</h3>
         <p class="text-sm text-gray-500">Много естественного света</p>
       </li>
-      <li>
+      <li class="group p-4 rounded-xl hover:bg-orange-50 transition">
+        <div class="w-16 h-16 mx-auto mb-2 flex items-center justify-center rounded-full bg-orange-100 group-hover:bg-orange-200 transition">
+          <i data-lucide="arrow-up-down" class="w-8 h-8 text-orange-500"></i>
+        </div>
         <h3 class="font-medium">Высокие потолки</h3>
         <p class="text-sm text-gray-500">Высота 3,7 м для свободы</p>
       </li>
-      <li>
+      <li class="group p-4 rounded-xl hover:bg-orange-50 transition">
+        <div class="w-16 h-16 mx-auto mb-2 flex items-center justify-center rounded-full bg-orange-100 group-hover:bg-orange-200 transition">
+          <i data-lucide="mirror" class="w-8 h-8 text-orange-500"></i>
+        </div>
         <h3 class="font-medium">Зеркала</h3>
         <p class="text-sm text-gray-500">Стена с большим зеркалом</p>
       </li>
-      <li>
+      <li class="group p-4 rounded-xl hover:bg-orange-50 transition">
+        <div class="w-16 h-16 mx-auto mb-2 flex items-center justify-center rounded-full bg-orange-100 group-hover:bg-orange-200 transition">
+          <i data-lucide="box" class="w-8 h-8 text-orange-500"></i>
+        </div>
         <h3 class="font-medium">Реквизит</h3>
         <p class="text-sm text-gray-500">Кресла, фоны и коврики</p>
       </li>
@@ -92,22 +111,26 @@
     <h2 class="text-2xl font-semibold text-center mb-8">Услуги</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
       <div class="p-6 border rounded-xl shadow flex flex-col">
-        <h3 class="font-medium mb-2">Фотосъёмка</h3>
+        <div class="mb-4 h-32 rounded bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1519682577862-22b62b24d91d?auto=format&fit=crop&w=400&q=80');"></div>
+        <h3 class="text-xl font-semibold mb-2">Фотосъёмка</h3>
         <p class="text-sm text-gray-500 mb-4">Профессиональные кадры в светлом зале</p>
         <a href="#contact" class="mt-auto bg-orange-500 text-white px-4 py-2 rounded-full transition">Забронировать</a>
       </div>
       <div class="p-6 border rounded-xl shadow flex flex-col">
-        <h3 class="font-medium mb-2">Йога</h3>
+        <div class="mb-4 h-32 rounded bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&w=400&q=80');"></div>
+        <h3 class="text-xl font-semibold mb-2">Йога</h3>
         <p class="text-sm text-gray-500 mb-4">Спокойное пространство для практик</p>
         <a href="#contact" class="mt-auto bg-orange-500 text-white px-4 py-2 rounded-full transition">Забронировать</a>
       </div>
       <div class="p-6 border rounded-xl shadow flex flex-col">
-        <h3 class="font-medium mb-2">Танцы</h3>
+        <div class="mb-4 h-32 rounded bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=400&q=80');"></div>
+        <h3 class="text-xl font-semibold mb-2">Танцы</h3>
         <p class="text-sm text-gray-500 mb-4">Удобный зал для тренировок</p>
         <a href="#contact" class="mt-auto bg-orange-500 text-white px-4 py-2 rounded-full transition">Забронировать</a>
       </div>
       <div class="p-6 border rounded-xl shadow flex flex-col">
-        <h3 class="font-medium mb-2">Мероприятия</h3>
+        <div class="mb-4 h-32 rounded bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80');"></div>
+        <h3 class="text-xl font-semibold mb-2">Мероприятия</h3>
         <p class="text-sm text-gray-500 mb-4">Проведение мастер-классов и встреч</p>
         <a href="#contact" class="mt-auto bg-orange-500 text-white px-4 py-2 rounded-full transition">Забронировать</a>
       </div>
@@ -119,47 +142,69 @@
     <h2 class="text-2xl font-semibold text-center mb-8">Цены</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
       <div class="p-6 bg-white rounded-xl shadow flex flex-col text-center">
-        <h3 class="font-medium mb-2">Фотосъёмка</h3>
+        <div class="mb-2 flex justify-center"><i data-lucide="camera" class="w-8 h-8 text-orange-500"></i></div>
+        <h3 class="text-xl font-semibold mb-2">Фотосъёмка</h3>
         <p class="text-sm text-gray-500 mb-4">30 мин — 850₽ · 1 час — 1 200₽</p>
         <a href="#contact" class="mt-auto bg-orange-500 text-white px-4 py-2 rounded-full transition">Забронировать</a>
       </div>
       <div class="p-6 bg-white rounded-xl shadow flex flex-col text-center">
-        <h3 class="font-medium mb-2">Йога</h3>
+        <div class="mb-2 flex justify-center"><i data-lucide="flower" class="w-8 h-8 text-orange-500"></i></div>
+        <h3 class="text-xl font-semibold mb-2">Йога</h3>
         <p class="text-sm text-gray-500 mb-4">500₽/час утром · 600₽/час вечером</p>
         <a href="#contact" class="mt-auto bg-orange-500 text-white px-4 py-2 rounded-full transition">Забронировать</a>
       </div>
       <div class="p-6 bg-white rounded-xl shadow flex flex-col text-center">
-        <h3 class="font-medium mb-2">Танцы</h3>
+        <div class="mb-2 flex justify-center"><i data-lucide="music" class="w-8 h-8 text-orange-500"></i></div>
+        <h3 class="text-xl font-semibold mb-2">Танцы</h3>
         <p class="text-sm text-gray-500 mb-4">500₽/час утром · 600₽/час вечером</p>
         <a href="#contact" class="mt-auto bg-orange-500 text-white px-4 py-2 rounded-full transition">Забронировать</a>
       </div>
       <div class="p-6 bg-white rounded-xl shadow flex flex-col text-center">
-        <h3 class="font-medium mb-2">Мероприятия</h3>
+        <div class="mb-2 flex justify-center"><i data-lucide="users" class="w-8 h-8 text-orange-500"></i></div>
+        <h3 class="text-xl font-semibold mb-2">Мероприятия</h3>
         <p class="text-sm text-gray-500 mb-4">от 700₽/час</p>
         <a href="#contact" class="mt-auto bg-orange-500 text-white px-4 py-2 rounded-full transition">Забронировать</a>
       </div>
     </div>
+    <p class="text-xs text-gray-500 text-center mt-4">*Цены актуальны на август 2025</p>
   </section>
 
   <!-- Gallery -->
-  <section id="gallery" class="max-w-screen-md mx-auto px-4 py-12">
-    <h2 class="text-2xl font-semibold text-center mb-8">Галерея</h2>
-    <div class="grid grid-cols-3 gap-2 mb-6">
-      <figure>
-        <img src="https://source.unsplash.com/seed/sun1/300x300" alt="Светлый зал" class="rounded" />
-        <figcaption class="text-xs text-gray-500 mt-1 text-center">Светлый зал</figcaption>
-      </figure>
-      <figure>
-        <img src="https://source.unsplash.com/seed/sun2/300x300" alt="Панорамные окна" class="rounded" />
-        <figcaption class="text-xs text-gray-500 mt-1 text-center">Панорамные окна</figcaption>
-      </figure>
-      <figure>
-        <img src="https://source.unsplash.com/seed/sun3/300x300" alt="Реквизит" class="rounded" />
-        <figcaption class="text-xs text-gray-500 mt-1 text-center">Реквизит</figcaption>
-      </figure>
-    </div>
-    <div class="text-center">
-      <a href="#gallery" class="inline-block bg-gray-100 text-gray-700 px-6 py-3 rounded-full text-lg shadow transition">Смотреть фото</a>
+  <section id="gallery" class="relative py-12">
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center blur-sm"></div>
+    <div class="relative max-w-screen-md mx-auto px-4">
+      <h2 class="text-2xl font-semibold text-center mb-8 text-white">Галерея</h2>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide relative">
+            <img src="https://source.unsplash.com/seed/sun1/800x600" alt="Светлый зал" class="w-full h-64 object-cover rounded" />
+            <div class="absolute bottom-0 left-0 w-full bg-black/50 text-white text-xs text-center py-1">Светлый зал</div>
+          </div>
+          <div class="swiper-slide relative">
+            <img src="https://source.unsplash.com/seed/sun2/800x600" alt="Панорамные окна" class="w-full h-64 object-cover rounded" />
+            <div class="absolute bottom-0 left-0 w-full bg-black/50 text-white text-xs text-center py-1">Панорамные окна</div>
+          </div>
+          <div class="swiper-slide relative">
+            <img src="https://source.unsplash.com/seed/sun3/800x600" alt="Реквизит" class="w-full h-64 object-cover rounded" />
+            <div class="absolute bottom-0 left-0 w-full bg-black/50 text-white text-xs text-center py-1">Реквизит</div>
+          </div>
+          <div class="swiper-slide relative">
+            <img src="https://source.unsplash.com/seed/sun4/800x600" alt="Йога" class="w-full h-64 object-cover rounded" />
+            <div class="absolute bottom-0 left-0 w-full bg-black/50 text-white text-xs text-center py-1">Йога</div>
+          </div>
+          <div class="swiper-slide relative">
+            <img src="https://source.unsplash.com/seed/sun5/800x600" alt="Танцы" class="w-full h-64 object-cover rounded" />
+            <div class="absolute bottom-0 left-0 w-full bg-black/50 text-white text-xs text-center py-1">Танцы</div>
+          </div>
+          <div class="swiper-slide relative">
+            <img src="https://source.unsplash.com/seed/sun6/800x600" alt="Мероприятия" class="w-full h-64 object-cover rounded" />
+            <div class="absolute bottom-0 left-0 w-full bg-black/50 text-white text-xs text-center py-1">Мероприятия</div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev text-white"></div>
+        <div class="swiper-button-next text-white"></div>
+      </div>
     </div>
   </section>
 
@@ -167,17 +212,26 @@
   <section id="reviews" class="max-w-screen-md mx-auto px-4 py-12 bg-gray-50">
     <h2 class="text-2xl font-semibold text-center mb-8">Отзывы</h2>
     <div class="space-y-6">
-      <figure class="p-4 border rounded-xl shadow">
-        <blockquote class="text-sm mb-2">«Очень светлая и уютная фотостудия — рекомендуем!»</blockquote>
-        <figcaption class="text-xs text-gray-500">— Анна</figcaption>
+      <figure class="p-4 border rounded-xl shadow flex items-center gap-4">
+        <img src="https://source.unsplash.com/seed/user1/80x80" alt="Анна" class="w-12 h-12 rounded-full object-cover" />
+        <div>
+          <div class="flex text-orange-500 mb-1 text-lg">★★★★★</div>
+          <blockquote class="text-sm mb-1">«Очень светлая и уютная фотостудия — рекомендуем!»</blockquote>
+          <figcaption class="text-xs text-gray-500">— Анна</figcaption>
+        </div>
       </figure>
-      <figure class="p-4 border rounded-xl shadow">
-        <blockquote class="text-sm mb-2">«Зал для танцев и йоги супер: зеркало во всю стену и кондиционер»</blockquote>
-        <figcaption class="text-xs text-gray-500">— Игорь</figcaption>
+      <figure class="p-4 border rounded-xl shadow flex items-center gap-4">
+        <img src="https://source.unsplash.com/seed/user2/80x80" alt="Игорь" class="w-12 h-12 rounded-full object-cover" />
+        <div>
+          <div class="flex text-orange-500 mb-1 text-lg">★★★★★</div>
+          <blockquote class="text-sm mb-1">«Зал для танцев и йоги супер: зеркало во всю стену и кондиционер»</blockquote>
+          <figcaption class="text-xs text-gray-500">— Игорь</figcaption>
+        </div>
       </figure>
     </div>
-    <div class="text-center mt-6">
+    <div class="text-center mt-6 space-x-4">
       <a href="#contact" class="inline-block bg-orange-500 text-white px-6 py-3 rounded-full text-lg shadow transition">Связаться</a>
+      <a href="https://2gis.ru/" class="inline-block bg-gray-100 text-gray-700 px-6 py-3 rounded-full text-lg shadow transition">Оставить отзыв</a>
     </div>
   </section>
 
@@ -185,17 +239,40 @@
   <section id="faq" class="max-w-screen-md mx-auto px-4 py-12">
     <h2 class="text-2xl font-semibold text-center mb-8">FAQ</h2>
     <div class="space-y-4">
-      <details class="p-4 border rounded-xl">
-        <summary class="font-medium">Можно перенести бронь?</summary>
+      <details class="group p-4 border rounded-xl">
+        <summary class="font-medium flex justify-between items-center cursor-pointer">
+          <span>Можно перенести бронь?</span>
+          <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-open:rotate-180"></i>
+        </summary>
         <p class="mt-2 text-sm text-gray-500">Да, сообщите за сутки до начала аренды.</p>
       </details>
-      <details class="p-4 border rounded-xl">
-        <summary class="font-medium">Есть ли реквизит?</summary>
+      <details class="group p-4 border rounded-xl">
+        <summary class="font-medium flex justify-between items-center cursor-pointer">
+          <span>Есть ли реквизит?</span>
+          <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-open:rotate-180"></i>
+        </summary>
         <p class="mt-2 text-sm text-gray-500">В стоимость входят кресла, фоны, зеркало и коврики.</p>
       </details>
-      <details class="p-4 border rounded-xl">
-        <summary class="font-medium">Где находится студия?</summary>
+      <details class="group p-4 border rounded-xl">
+        <summary class="font-medium flex justify-between items-center cursor-pointer">
+          <span>Где находится студия?</span>
+          <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-open:rotate-180"></i>
+        </summary>
         <p class="mt-2 text-sm text-gray-500">Байкальская, 19А, 5 этаж, вход с торца.</p>
+      </details>
+      <details class="group p-4 border rounded-xl">
+        <summary class="font-medium flex justify-between items-center cursor-pointer">
+          <span>Можно ли провести романтический ужин?</span>
+          <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-open:rotate-180"></i>
+        </summary>
+        <p class="mt-2 text-sm text-gray-500">Да, зал можно оформить для романтического вечера.</p>
+      </details>
+      <details class="group p-4 border rounded-xl">
+        <summary class="font-medium flex justify-between items-center cursor-pointer">
+          <span>Разрешено ли со своей едой?</span>
+          <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-open:rotate-180"></i>
+        </summary>
+        <p class="mt-2 text-sm text-gray-500">Да, но просим соблюдать чистоту и аккуратность.</p>
       </details>
     </div>
   </section>
@@ -205,10 +282,15 @@
     <h2 class="text-2xl font-semibold text-center mb-8">Контакты</h2>
     <div class="text-center space-y-2">
       <p>Иркутск, ул. Байкальская, 19А</p>
+      <p>Мы находимся в центре Иркутска, рядом с ТЦ «Карамель». Вход с торца, 5 этаж, лифт.</p>
       <p><a href="tel:+79025101206" class="underline">+7 902 510‑12‑06</a></p>
       <p>
         <a href="https://t.me/suncity" class="text-orange-500 underline">Telegram</a> ·
         <a href="https://vk.com/suncity" class="text-orange-500 underline">VK</a>
+      </p>
+      <p class="text-sm">
+        <a href="https://2gis.ru/" class="text-orange-500 underline">2ГИС</a> ·
+        <a href="https://yandex.ru/maps/" class="text-orange-500 underline">Яндекс Карты</a>
       </p>
     </div>
     <div class="mt-6 w-full h-64">
@@ -220,8 +302,23 @@
     </div>
   </section>
 
+  <footer class="bg-white py-8 text-center text-sm text-gray-500">
+    <img src="https://source.unsplash.com/seed/building/300x150" alt="Вход в студию" class="mx-auto mb-4 w-48 h-32 object-cover rounded" />
+    <p>© 2025 SUNCITY</p>
+  </footer>
+
   <!-- Sticky booking button -->
   <a href="#contact" class="fixed bottom-4 right-4 bg-orange-500 text-white px-6 py-3 rounded-full shadow-lg text-lg transition">Забронировать</a>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script>
+    lucide.createIcons();
+    new Swiper('.swiper', {
+      loop: true,
+      pagination: { el: '.swiper-pagination', clickable: true },
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+    });
+  </script>
 
   <!-- SEO & analytics are connected in the head above -->
 </body>
