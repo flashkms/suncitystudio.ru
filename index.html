@@ -118,25 +118,41 @@
     <h2 class="text-2xl font-semibold text-center mb-8">Услуги</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
       <div class="p-6 border rounded-xl shadow flex flex-col">
-        <div class="mb-4 h-32 rounded bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1519682577862-22b62b24d91d?auto=format&fit=crop&w=400&q=80');"></div>
+        <div class="mb-4 grid grid-cols-3 gap-2">
+          <img src="https://source.unsplash.com/seed/photo1/200x150" alt="Фотосъёмка" data-service="photo" class="w-full h-24 object-cover rounded cursor-pointer service-image" />
+          <img src="https://source.unsplash.com/seed/photo2/200x150" alt="Фотосъёмка" data-service="photo" class="w-full h-24 object-cover rounded cursor-pointer service-image" />
+          <img src="https://source.unsplash.com/seed/photo3/200x150" alt="Фотосъёмка" data-service="photo" class="w-full h-24 object-cover rounded cursor-pointer service-image" />
+        </div>
         <h3 class="text-xl font-semibold mb-2">Фотосъёмка</h3>
         <p class="text-sm text-gray-500 mb-4">Профессиональные кадры в светлом зале</p>
         <a href="#" class="booking-button mt-auto bg-orange-500 text-white px-4 py-2 rounded-full transition">Забронировать</a>
       </div>
       <div class="p-6 border rounded-xl shadow flex flex-col">
-        <div class="mb-4 h-32 rounded bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&w=400&q=80');"></div>
+        <div class="mb-4 grid grid-cols-3 gap-2">
+          <img src="https://source.unsplash.com/seed/yoga1/200x150" alt="Йога" data-service="yoga" class="w-full h-24 object-cover rounded cursor-pointer service-image" />
+          <img src="https://source.unsplash.com/seed/yoga2/200x150" alt="Йога" data-service="yoga" class="w-full h-24 object-cover rounded cursor-pointer service-image" />
+          <img src="https://source.unsplash.com/seed/yoga3/200x150" alt="Йога" data-service="yoga" class="w-full h-24 object-cover rounded cursor-pointer service-image" />
+        </div>
         <h3 class="text-xl font-semibold mb-2">Йога</h3>
         <p class="text-sm text-gray-500 mb-4">Спокойное пространство для практик</p>
         <a href="#" class="booking-button mt-auto bg-orange-500 text-white px-4 py-2 rounded-full transition">Забронировать</a>
       </div>
       <div class="p-6 border rounded-xl shadow flex flex-col">
-        <div class="mb-4 h-32 rounded bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=400&q=80');"></div>
+        <div class="mb-4 grid grid-cols-3 gap-2">
+          <img src="https://source.unsplash.com/seed/dance1/200x150" alt="Танцы" data-service="dance" class="w-full h-24 object-cover rounded cursor-pointer service-image" />
+          <img src="https://source.unsplash.com/seed/dance2/200x150" alt="Танцы" data-service="dance" class="w-full h-24 object-cover rounded cursor-pointer service-image" />
+          <img src="https://source.unsplash.com/seed/dance3/200x150" alt="Танцы" data-service="dance" class="w-full h-24 object-cover rounded cursor-pointer service-image" />
+        </div>
         <h3 class="text-xl font-semibold mb-2">Танцы</h3>
         <p class="text-sm text-gray-500 mb-4">Удобный зал для тренировок</p>
         <a href="#" class="booking-button mt-auto bg-orange-500 text-white px-4 py-2 rounded-full transition">Забронировать</a>
       </div>
       <div class="p-6 border rounded-xl shadow flex flex-col">
-        <div class="mb-4 h-32 rounded bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80');"></div>
+        <div class="mb-4 grid grid-cols-3 gap-2">
+          <img src="https://source.unsplash.com/seed/event1/200x150" alt="Мероприятия" data-service="event" class="w-full h-24 object-cover rounded cursor-pointer service-image" />
+          <img src="https://source.unsplash.com/seed/event2/200x150" alt="Мероприятия" data-service="event" class="w-full h-24 object-cover rounded cursor-pointer service-image" />
+          <img src="https://source.unsplash.com/seed/event3/200x150" alt="Мероприятия" data-service="event" class="w-full h-24 object-cover rounded cursor-pointer service-image" />
+        </div>
         <h3 class="text-xl font-semibold mb-2">Мероприятия</h3>
         <p class="text-sm text-gray-500 mb-4">Проведение мастер-классов и встреч</p>
         <a href="#" class="booking-button mt-auto bg-orange-500 text-white px-4 py-2 rounded-full transition">Забронировать</a>
@@ -365,6 +381,19 @@
     </div>
   </div>
 
+  <!-- Service gallery modal -->
+  <div id="service-modal" class="fixed inset-0 z-50 hidden bg-black/80 flex items-center justify-center p-4">
+    <div class="relative w-full max-w-2xl">
+      <div class="swiper service-swiper">
+        <div class="swiper-wrapper" id="service-swiper-wrapper"></div>
+        <div class="swiper-pagination service-pagination"></div>
+        <div class="swiper-button-prev service-prev text-white"></div>
+        <div class="swiper-button-next service-next text-white"></div>
+      </div>
+      <button id="close-service-modal" class="absolute top-2 right-2 text-white">✕</button>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script>
     lucide.createIcons();
@@ -382,11 +411,64 @@
       });
     });
     document.getElementById('close-booking').addEventListener('click', closeBooking);
-    bookingModal.addEventListener('click', e => {
-      if (e.target === bookingModal) closeBooking();
-    });
-  </script>
+      bookingModal.addEventListener('click', e => {
+        if (e.target === bookingModal) closeBooking();
+      });
 
-  <!-- SEO & analytics are connected in the head above -->
-</body>
+      const serviceGalleries = {
+        photo: [
+          'https://source.unsplash.com/seed/photo1/800x600',
+          'https://source.unsplash.com/seed/photo2/800x600',
+          'https://source.unsplash.com/seed/photo3/800x600',
+        ],
+        yoga: [
+          'https://source.unsplash.com/seed/yoga1/800x600',
+          'https://source.unsplash.com/seed/yoga2/800x600',
+          'https://source.unsplash.com/seed/yoga3/800x600',
+        ],
+        dance: [
+          'https://source.unsplash.com/seed/dance1/800x600',
+          'https://source.unsplash.com/seed/dance2/800x600',
+          'https://source.unsplash.com/seed/dance3/800x600',
+        ],
+        event: [
+          'https://source.unsplash.com/seed/event1/800x600',
+          'https://source.unsplash.com/seed/event2/800x600',
+          'https://source.unsplash.com/seed/event3/800x600',
+        ],
+      };
+
+      const serviceModal = document.getElementById('service-modal');
+      const serviceWrapper = document.getElementById('service-swiper-wrapper');
+      let serviceSwiper;
+
+      document.querySelectorAll('.service-image').forEach(img => {
+        img.addEventListener('click', () => {
+          const key = img.dataset.service;
+          serviceWrapper.innerHTML = '';
+          serviceGalleries[key].forEach(url => {
+            const slide = document.createElement('div');
+            slide.className = 'swiper-slide';
+            slide.innerHTML = `<img src="${url}" class="w-full h-64 object-cover rounded" />`;
+            serviceWrapper.appendChild(slide);
+          });
+          if (serviceSwiper) serviceSwiper.destroy(true, true);
+          serviceSwiper = new Swiper('.service-swiper', {
+            loop: true,
+            pagination: { el: '.service-pagination', clickable: true },
+            navigation: { nextEl: '.service-next', prevEl: '.service-prev' },
+          });
+          serviceModal.classList.remove('hidden');
+        });
+      });
+
+      const closeService = () => serviceModal.classList.add('hidden');
+      document.getElementById('close-service-modal').addEventListener('click', closeService);
+      serviceModal.addEventListener('click', e => {
+        if (e.target === serviceModal) closeService();
+      });
+    </script>
+
+    <!-- SEO & analytics are connected in the head above -->
+  </body>
 </html>
