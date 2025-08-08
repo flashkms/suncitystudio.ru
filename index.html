@@ -50,12 +50,12 @@
     <nav class="max-w-screen-md mx-auto flex justify-between items-center p-4 text-lg relative">
       <a href="#hero" class="font-semibold">SUNCITY</a>
       <div class="flex items-center">
-        <div id="nav-menu" class="hidden absolute top-full right-0 mt-2 bg-white border rounded shadow-md p-4 flex-col space-y-2 text-sm md:static md:flex md:flex-row md:space-x-4 md:space-y-0 md:border-0 md:shadow-none md:bg-transparent md:mt-0">
-          <a href="#services" class="hover:text-orange-500 transition">Услуги</a>
-          <a href="#pricing" class="hover:text-orange-500 transition">Цены</a>
-          <a href="#gallery" class="hover:text-orange-500 transition">Смотреть зал</a>
-          <a href="#contact" class="hover:text-orange-500 transition">Связаться с нами</a>
-          <a href="#" class="booking-button hover:text-orange-500 transition">Забронировать</a>
+        <div id="nav-menu" class="hidden absolute top-full right-0 mt-2 bg-white border rounded shadow-md overflow-hidden flex flex-col text-sm divide-y divide-gray-200 md:static md:flex md:flex-row md:divide-y-0 md:space-x-4 md:overflow-visible md:border-0 md:shadow-none md:bg-transparent md:mt-0">
+          <a href="#services" class="block px-4 py-2 hover:bg-gray-100 hover:text-orange-500 transition md:px-0 md:py-0 md:hover:bg-transparent">Услуги</a>
+          <a href="#pricing" class="block px-4 py-2 hover:bg-gray-100 hover:text-orange-500 transition md:px-0 md:py-0 md:hover:bg-transparent">Цены</a>
+          <a href="#gallery" class="block px-4 py-2 hover:bg-gray-100 hover:text-orange-500 transition md:px-0 md:py-0 md:hover:bg-transparent">Смотреть зал</a>
+          <a href="#contact" class="block px-4 py-2 hover:bg-gray-100 hover:text-orange-500 transition md:px-0 md:py-0 md:hover:bg-transparent">Связаться с нами</a>
+          <a href="#" class="booking-button block px-4 py-2 hover:bg-gray-100 hover:text-orange-500 transition md:px-0 md:py-0 md:hover:bg-transparent">Забронировать</a>
         </div>
         <button id="menu-toggle" class="md:hidden ml-4" aria-label="Меню">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -367,7 +367,7 @@
   </footer>
 
   <!-- Sticky booking button -->
-  <a href="#" class="booking-button fixed bottom-4 right-4 bg-orange-500 text-white px-6 py-3 rounded-full shadow-lg text-lg transition">Забронировать</a>
+  <a href="#" class="booking-button fixed bottom-4 right-4 hidden lg:block bg-orange-500 text-white px-6 py-3 rounded-full shadow-lg text-lg transition">Забронировать</a>
 
   <!-- Booking modal -->
   <div id="booking-modal" class="fixed inset-0 z-50 hidden bg-black/60 flex items-end sm:items-center justify-center p-4">
