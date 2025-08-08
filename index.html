@@ -50,7 +50,7 @@
     <nav class="max-w-screen-md mx-auto flex justify-between items-center p-4 text-lg relative">
       <a href="#hero" class="font-semibold">SUNCITY</a>
       <div class="flex items-center">
-        <div id="nav-menu" class="hidden absolute top-full right-0 mt-2 bg-white border rounded shadow-md overflow-hidden flex flex-col text-sm divide-y divide-gray-200 md:static md:flex md:flex-row md:divide-y-0 md:space-x-4 md:overflow-visible md:border-0 md:shadow-none md:bg-transparent md:mt-0">
+        <div id="nav-menu" class="hidden absolute top-full right-0 bg-white border rounded shadow-md overflow-hidden flex flex-col text-sm divide-y divide-gray-200 md:static md:flex md:flex-row md:divide-y-0 md:space-x-4 md:overflow-visible md:border-0 md:shadow-none md:bg-transparent md:mt-0">
           <a href="#services" class="block px-4 py-2 hover:bg-gray-100 hover:text-orange-500 transition md:px-0 md:py-0 md:hover:bg-transparent">Услуги</a>
           <a href="#pricing" class="block px-4 py-2 hover:bg-gray-100 hover:text-orange-500 transition md:px-0 md:py-0 md:hover:bg-transparent">Цены</a>
           <a href="#gallery" class="block px-4 py-2 hover:bg-gray-100 hover:text-orange-500 transition md:px-0 md:py-0 md:hover:bg-transparent">Смотреть зал</a>
@@ -414,6 +414,11 @@
     });
     navMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => navMenu.classList.add('hidden'));
+    });
+    document.addEventListener('click', e => {
+      if (!navMenu.classList.contains('hidden') && !navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+        navMenu.classList.add('hidden');
+      }
     });
     new Swiper('.swiper', {
       loop: true,
