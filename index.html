@@ -47,20 +47,29 @@
 <body class="bg-white text-gray-800 font-sans">
   <!-- Sticky header -->
   <header class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur z-50 border-b">
-    <nav class="max-w-screen-md mx-auto flex justify-between items-center p-4 text-lg">
+    <nav class="max-w-screen-md mx-auto flex justify-between items-center p-4 text-lg relative">
       <a href="#hero" class="font-semibold">SUNCITY</a>
-      <div class="space-x-4 text-sm">
-        <a href="#services" class="hover:text-orange-500 transition">Услуги</a>
-        <a href="#pricing" class="hover:text-orange-500 transition">Цены</a>
-        <a href="#gallery" class="hover:text-orange-500 transition">Смотреть зал</a>
-        <a href="#contact" class="hover:text-orange-500 transition">Связаться с нами</a>
-        <a href="#" class="booking-button hover:text-orange-500 transition">Забронировать</a>
+      <div class="flex items-center">
+        <div id="nav-menu" class="hidden absolute top-full right-0 mt-2 bg-white border rounded shadow-md p-4 flex-col space-y-2 text-sm md:static md:flex md:flex-row md:space-x-4 md:space-y-0 md:border-0 md:shadow-none md:bg-transparent md:mt-0">
+          <a href="#services" class="hover:text-orange-500 transition">Услуги</a>
+          <a href="#pricing" class="hover:text-orange-500 transition">Цены</a>
+          <a href="#gallery" class="hover:text-orange-500 transition">Смотреть зал</a>
+          <a href="#contact" class="hover:text-orange-500 transition">Связаться с нами</a>
+          <a href="#" class="booking-button hover:text-orange-500 transition">Забронировать</a>
+        </div>
+        <button id="menu-toggle" class="md:hidden ml-4" aria-label="Меню">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
       </div>
     </nav>
   </header>
 
   <!-- Hero -->
-  <section id="hero" class="relative pt-24 pb-20 text-center max-w-screen-md mx-auto px-4 overflow-hidden bg-center bg-cover" style="background-image:url('https://images.unsplash.com/photo-1545242640-7c9e9cc07d23?auto=format&amp;fit=crop&amp;w=800&amp;h=1200&amp;q=80');">
+  <section id="hero" class="relative pt-24 pb-20 text-center max-w-screen-md mx-auto px-4 overflow-hidden bg-center bg-cover" style="background-image:url('img/323-min.jpg');">
     <div class="absolute inset-0 bg-white/70"></div>
     <div class="absolute top-0 left-0 right-0 h-24 bg-white"></div>
     <div class="relative z-10">
@@ -398,6 +407,14 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script>
     lucide.createIcons();
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('hidden');
+    });
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navMenu.classList.add('hidden'));
+    });
     new Swiper('.swiper', {
       loop: true,
       pagination: { el: '.swiper-pagination', clickable: true },
