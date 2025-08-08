@@ -384,7 +384,7 @@
 
   <!-- Service gallery modal -->
   <div id="service-modal" class="fixed inset-0 z-50 hidden bg-black/80 flex items-center justify-center p-4">
-    <div class="relative w-full max-w-2xl">
+    <div class="relative inline-block max-w-[90vw] max-h-[90vh]">
       <div class="swiper service-swiper">
         <div class="swiper-wrapper" id="service-swiper-wrapper"></div>
         <div class="swiper-pagination service-pagination"></div>
@@ -449,13 +449,14 @@
           serviceWrapper.innerHTML = '';
           serviceGalleries[key].forEach(url => {
             const slide = document.createElement('div');
-            slide.className = 'swiper-slide';
-            slide.innerHTML = `<img src="${url}" class="w-full h-64 object-cover rounded" />`;
+            slide.className = 'swiper-slide flex items-center justify-center';
+            slide.innerHTML = `<img src="${url}" class="max-h-[90vh] max-w-[90vw] w-auto h-auto object-contain rounded" />`;
             serviceWrapper.appendChild(slide);
           });
           if (serviceSwiper) serviceSwiper.destroy(true, true);
           serviceSwiper = new Swiper('.service-swiper', {
             loop: true,
+            autoHeight: true,
             pagination: { el: '.service-pagination', clickable: true },
             navigation: { nextEl: '.service-next', prevEl: '.service-prev' },
           });
