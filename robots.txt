@@ -1,4 +1,4 @@
 User-agent: *
-Allow: /
-
+Disallow:
 Sitemap: https://suncitystudio.ru/sitemap.xml
+Host: suncitystudio.ru
