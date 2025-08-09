@@ -13,11 +13,33 @@
 <meta name="twitter:description" content="Актуальные почасовые тарифы SUNCITY" />
 <meta name="twitter:image" content="https://suncitystudio.ru/img/og-image.jpg" />
 <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="max-w-screen-md mx-auto px-4 py-6">
+<body class="bg-white text-gray-800 font-sans">
+<header class="border-b bg-white">
+  <nav class="max-w-screen-md mx-auto flex justify-between items-center p-4">
+    <a href="/suncitystudio.ru/" class="font-semibold">SUNCITY</a>
+    <div id="nav-menu" class="hidden md:flex space-x-4">
+      <a href="/suncitystudio.ru/#services" class="hover:text-orange-500">Услуги</a>
+      <a href="/suncitystudio.ru/ceny/" class="hover:text-orange-500">Цены</a>
+      <a href="/suncitystudio.ru/kontakty/" class="hover:text-orange-500">Контакты</a>
+      <a href="https://dikidi.ru/1321360?utm_source=site&utm_medium=button&utm_campaign=booking" target="_blank" rel="nofollow" class="hover:text-orange-500">Забронировать</a>
+    </div>
+    <button id="menu-toggle" class="md:hidden" aria-label="Меню">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </nav>
+  <div id="mobile-menu" class="hidden md:hidden border-t">
+    <a href="/suncitystudio.ru/#services" class="block px-4 py-2">Услуги</a>
+    <a href="/suncitystudio.ru/ceny/" class="block px-4 py-2">Цены</a>
+    <a href="/suncitystudio.ru/kontakty/" class="block px-4 py-2">Контакты</a>
+    <a href="https://dikidi.ru/1321360?utm_source=site&utm_medium=button&utm_campaign=booking" target="_blank" rel="nofollow" class="block px-4 py-2">Забронировать</a>
+  </div>
+</header>
+<main class="max-w-screen-md mx-auto px-4 py-6">
 <nav aria-label="breadcrumb" class="text-sm mb-4">
   <ol class="flex text-gray-600">
-    <li><a href="/" class="text-orange-500 hover:underline">Главная</a></li>
+    <li><a href="/suncitystudio.ru/" class="text-orange-500 hover:underline">Главная</a></li>
     <li class="mx-2">/</li>
     <li>Цены</li>
   </ol>
@@ -31,7 +53,7 @@
   <div class="p-4 border rounded"><h2 class="text-xl font-semibold mb-2">Пакеты</h2><p>5 часов — скидка 10%<br/>10 часов — скидка 15%</p></div>
 </div>
 <div class="mb-8 text-center">
-  <a href="#" class="booking-button inline-block bg-orange-500 text-white px-6 py-3 rounded-full">Забронировать</a>
+  <a href="https://dikidi.ru/1321360?utm_source=site&utm_medium=button&utm_campaign=booking" target="_blank" rel="nofollow" class="inline-block bg-orange-500 text-white px-6 py-3 rounded-full">Забронировать</a>
 </div>
 <h2 class="text-2xl font-semibold mb-4">Почему мы в Иркутске</h2>
 <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
@@ -78,6 +100,19 @@
   {"@type":"Question","name":"Есть ли скидки при длительной аренде?","acceptedAnswer":{"@type":"Answer","text":"Да, при заказе пакетов от 5 часов действует скидка."}}
  ]
 }
+</script>
+</main>
+<footer class="mt-12 border-t pt-4 text-center text-sm text-gray-500">
+  <p>&copy; 2024 SUNCITY, Иркутск</p>
+  <nav class="mt-2 flex justify-center space-x-4">
+    <a href="/suncitystudio.ru/pravila/" class="hover:text-orange-500">Правила</a>
+    <a href="/suncitystudio.ru/kontakty/" class="hover:text-orange-500">Контакты</a>
+  </nav>
+</footer>
+<script>
+const menuToggle=document.getElementById('menu-toggle');
+const mobileMenu=document.getElementById('mobile-menu');
+menuToggle.addEventListener('click',()=>mobileMenu.classList.toggle('hidden'));
 </script>
 </body>
 </html>
