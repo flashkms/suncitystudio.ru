@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <title>SUNCITY — Sun + Camera (vector exact copy)</title>
+  <desc>Orange sun with triangular rays and a white camera inside; lens and viewfinder have orange outline.</desc>
+
+  <!-- Rays -->
+  <polygon points="462.86,234.26 504.00,256.00 462.86,277.74" fill="#F0791C"/>
+    <polygon points="446.02,340.60 470.77,380.00 424.28,378.26" fill="#F0791C"/>
+    <polygon points="378.26,424.28 380.00,470.77 340.60,446.02" fill="#F0791C"/>
+    <polygon points="277.74,462.86 256.00,504.00 234.26,462.86" fill="#F0791C"/>
+    <polygon points="171.40,446.02 132.00,470.77 133.74,424.28" fill="#F0791C"/>
+    <polygon points="87.72,378.26 41.23,380.00 65.98,340.60" fill="#F0791C"/>
+    <polygon points="49.14,277.74 8.00,256.00 49.14,234.26" fill="#F0791C"/>
+    <polygon points="65.98,171.40 41.23,132.00 87.72,133.74" fill="#F0791C"/>
+    <polygon points="133.74,87.72 132.00,41.23 171.40,65.98" fill="#F0791C"/>
+    <polygon points="234.26,49.14 256.00,8.00 277.74,49.14" fill="#F0791C"/>
+    <polygon points="340.60,65.98 380.00,41.23 378.26,87.72" fill="#F0791C"/>
+    <polygon points="424.28,133.74 470.77,132.00 446.02,171.40" fill="#F0791C"/>
+
+  <!-- Sun core -->
+  <circle cx="256" cy="256" r="208" fill="#F0791C"/>
+
+  <!-- Camera -->
+  <g fill="#FFFFFF" stroke="none">
+    <rect x="128" y="184" width="256" height="160" rx="24"/>
+    <rect x="152" y="144" width="144" height="48" rx="16"/>
+    <!-- Lens with orange ring -->
+    <circle cx="256" cy="264" r="56" fill="#FFFFFF" stroke="#F0791C" stroke-width="16"/>
+    <!-- Viewfinder with orange ring -->
+    <rect x="304" y="208" width="48" height="48" rx="8" fill="#FFFFFF" stroke="#F0791C" stroke-width="16"/>
+  </g>
+</svg>
