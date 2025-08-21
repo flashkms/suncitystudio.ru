@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="512" height="512" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-  <title>SUNCITY Sun + Camera (orange core, white camera)</title>
-  <g fill="#F0791C">
-    <g transform="translate(32 32)">
-      <rect x="-1" y="-28" width="2" height="9" rx="1" transform="rotate(0)"/><rect x="-1" y="-28" width="2" height="9" rx="1" transform="rotate(30)"/><rect x="-1" y="-28" width="2" height="9" rx="1" transform="rotate(60)"/><rect x="-1" y="-28" width="2" height="9" rx="1" transform="rotate(90)"/><rect x="-1" y="-28" width="2" height="9" rx="1" transform="rotate(120)"/><rect x="-1" y="-28" width="2" height="9" rx="1" transform="rotate(150)"/><rect x="-1" y="-28" width="2" height="9" rx="1" transform="rotate(180)"/><rect x="-1" y="-28" width="2" height="9" rx="1" transform="rotate(210)"/><rect x="-1" y="-28" width="2" height="9" rx="1" transform="rotate(240)"/><rect x="-1" y="-28" width="2" height="9" rx="1" transform="rotate(270)"/><rect x="-1" y="-28" width="2" height="9" rx="1" transform="rotate(300)"/><rect x="-1" y="-28" width="2" height="9" rx="1" transform="rotate(330)"/>
-    </g>
-    <circle cx="32" cy="32" r="26.5"/>
+  <title>SUNCITY sun in camera</title>
+  <rect width="64" height="64" fill="#F0791C"/>
+  <g stroke="#FFFFFF" stroke-width="2" fill="none">
+    <rect x="12" y="20" width="40" height="28" rx="4"/>
+    <rect x="24" y="14" width="16" height="8" rx="2"/>
+    <circle cx="32" cy="34" r="10"/>
   </g>
-  <g>
-    <rect x="16.2" y="27.2" width="31.6" height="20.6" rx="4.6" fill="#F0791C"/>
-    <rect x="17.8" y="28.8" width="28.4" height="17.2" rx="4" fill="#FFFFFF"/>
-    <rect x="18.6" y="23.2" width="19.6" height="6.4" rx="2.2" fill="#F0791C"/>
-    <rect x="20.2" y="24.6" width="16.4" height="3.6" rx="2" fill="#FFFFFF"/>
-    <circle cx="32" cy="36.8" r="7.8" fill="#F0791C"/>
-    <circle cx="32" cy="36.8" r="4.8" fill="#FFFFFF"/>
-    <rect x="40.2" y="30.2" width="5.6" height="5.6" rx="1" fill="#FFFFFF"/>
-  </g>
+  <circle cx="32" cy="34" r="5" fill="#FFFFFF"/>
 </svg>
