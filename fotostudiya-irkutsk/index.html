@@ -13,6 +13,7 @@
 <meta name="twitter:description" content="Почасовая аренда с естественным светом" />
 <meta name="twitter:image" content="https://suncitystudio.ru/img/og-image.jpg" />
 <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 <script src="https://unpkg.com/lucide@latest"></script>
 <script type="application/ld+json">
 {
@@ -82,9 +83,9 @@
 <p class="mb-4">Вы можете выбрать свободное время в онлайн‑календаре или связаться с нами в мессенджерах. Оплата принимается наличными, переводом или по счёту. Для постоянных клиентов доступны скидки и возможность хранения реквизита в студии.</p>
 <h2 class="text-2xl font-semibold mb-2">Галерея</h2>
 <div class="grid grid-cols-3 gap-2 mb-6">
-  <img src="../img/f1.webp" alt="Фотостудия SUNCITY Иркутск" loading="lazy" class="w-full h-40 object-cover rounded" />
-  <img src="../img/f2.webp" alt="Естественный свет фотостудии SUNCITY" loading="lazy" class="w-full h-40 object-cover rounded" />
-  <img src="../img/f3.webp" alt="Реквизит фотостудии SUNCITY Иркутск" loading="lazy" class="w-full h-40 object-cover rounded" />
+  <img src="../img/f1.webp" alt="Фотостудия SUNCITY Иркутск" loading="lazy" data-service="photo" class="w-full aspect-[4/5] object-cover rounded cursor-pointer service-image" />
+  <img src="../img/f2.webp" alt="Естественный свет фотостудии SUNCITY" loading="lazy" data-service="photo" class="w-full aspect-[4/5] object-cover rounded cursor-pointer service-image" />
+  <img src="../img/f3.webp" alt="Реквизит фотостудии SUNCITY Иркутск" loading="lazy" data-service="photo" class="w-full aspect-[4/5] object-cover rounded cursor-pointer service-image" />
 </div>
 <div class="mb-8 text-center">
   <a href="https://dikidi.ru/1321360?utm_source=site&utm_medium=button&utm_campaign=booking" target="_blank" rel="nofollow" class="inline-block bg-orange-500 text-white px-6 py-3 rounded-full">Забронировать</a>
@@ -133,6 +134,19 @@
 }
 </script>
 </main>
+
+  <!-- Service gallery modal -->
+  <div id="service-modal" class="fixed inset-0 z-50 hidden bg-black/80 flex items-center justify-center p-4">
+    <div class="relative inline-block max-w-[90vw] max-h-[90vh]">
+      <div class="swiper service-swiper">
+        <div class="swiper-wrapper" id="service-swiper-wrapper"></div>
+        <div class="swiper-pagination service-pagination"></div>
+        <div class="swiper-button-prev service-prev text-white"></div>
+        <div class="swiper-button-next service-next text-white"></div>
+      </div>
+      <button id="close-service-modal" class="absolute top-2 right-2 text-white">✕</button>
+    </div>
+  </div>
 <footer class="mt-12 border-t pt-4 text-center text-sm text-gray-500">
   <p>&copy; 2024 SUNCITY, Иркутск</p>
   <nav class="mt-2 flex justify-center space-x-4">
@@ -140,10 +154,51 @@
     <a href="/suncitystudio.ru/kontakty/" class="hover:text-orange-500">Контакты</a>
   </nav>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script>
-const menuToggle=document.getElementById('menu-toggle');
-const mobileMenu=document.getElementById('mobile-menu');
-menuToggle.addEventListener('click',()=>mobileMenu.classList.toggle('hidden'));
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+const base = '../img/';
+const serviceGalleries = {
+  photo: Array.from({ length: 34 }, (_, i) => `${base}f${i + 1}.webp`),
+  yoga: Array.from({ length: 3 }, (_, i) => `${base}i${i + 1}.webp`),
+  dance: Array.from({ length: 4 }, (_, i) => `${base}t${i + 1}.webp`),
+  event: Array.from({ length: 5 }, (_, i) => `${base}m${i + 1}.webp`),
+};
+serviceGalleries.all = [...serviceGalleries.photo, ...serviceGalleries.yoga, ...serviceGalleries.dance, ...serviceGalleries.event];
+
+const serviceModal = document.getElementById('service-modal');
+const serviceWrapper = document.getElementById('service-swiper-wrapper');
+let serviceSwiper;
+
+document.querySelectorAll('.service-image').forEach(img => {
+  img.addEventListener('click', () => {
+    const key = img.dataset.service;
+    serviceWrapper.innerHTML = '';
+    serviceGalleries[key].forEach(url => {
+      const slide = document.createElement('div');
+      slide.className = 'swiper-slide flex items-center justify-center';
+      slide.innerHTML = `<img src="${url}" loading="lazy" class="max-h-[90vh] max-w-[90vw] w-auto h-auto object-contain rounded" />`;
+      serviceWrapper.appendChild(slide);
+    });
+    if (serviceSwiper) serviceSwiper.destroy(true, true);
+    serviceSwiper = new Swiper('.service-swiper', {
+      loop: true,
+      autoHeight: true,
+      pagination: { el: '.service-pagination', clickable: true },
+      navigation: { nextEl: '.service-next', prevEl: '.service-prev' },
+    });
+    serviceModal.classList.remove('hidden');
+  });
+});
+
+const closeService = () => serviceModal.classList.add('hidden');
+document.getElementById('close-service-modal').addEventListener('click', closeService);
+serviceModal.addEventListener('click', e => {
+  if (!e.target.closest('img') && !e.target.closest('.service-prev') && !e.target.closest('.service-next') && !e.target.closest('.service-pagination')) closeService();
+});
 </script>
 </body>
 </html>
