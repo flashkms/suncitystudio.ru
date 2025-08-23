@@ -1,67 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://suncitystudio.ru/</loc>
+    <loc>./</loc>
     <lastmod>2025-08-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://suncitystudio.ru/ceny/</loc>
+    <loc>./ceny/</loc>
     <lastmod>2025-08-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://suncitystudio.ru/kontakty/</loc>
+    <loc>./kontakty/</loc>
     <lastmod>2025-08-09</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://suncitystudio.ru/arenda-zala-irkutsk/</loc>
+    <loc>./arenda-zala-irkutsk/</loc>
     <lastmod>2025-08-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://suncitystudio.ru/fotostudiya-irkutsk/</loc>
+    <loc>./fotostudiya-irkutsk/</loc>
     <lastmod>2025-08-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://suncitystudio.ru/tancy-zal-irkutsk/</loc>
+    <loc>./tancy-zal-irkutsk/</loc>
     <lastmod>2025-08-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://suncitystudio.ru/yoga-zal-irkutsk/</loc>
+    <loc>./yoga-zal-irkutsk/</loc>
     <lastmod>2025-08-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://suncitystudio.ru/fly-yoga-irkutsk/</loc>
+    <loc>./fly-yoga-irkutsk/</loc>
     <lastmod>2025-08-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://suncitystudio.ru/meropriyatiya-irkutsk/</loc>
+    <loc>./meropriyatiya-irkutsk/</loc>
     <lastmod>2025-08-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://suncitystudio.ru/gender-party-irkutsk/</loc>
+    <loc>./gender-party-irkutsk/</loc>
     <lastmod>2025-08-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://suncitystudio.ru/pravila/</loc>
+    <loc>./pravila/</loc>
     <lastmod>2025-08-09</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
